@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: composer install
+      - name: install composer
         run: docker exec -d erp composer install
         
       - name: cat composer.json
