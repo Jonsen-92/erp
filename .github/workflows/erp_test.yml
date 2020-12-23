@@ -26,14 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: composer install
-        run: docker exec -d erp composer install
+      - name: get directory
+        run: pwd
       
-      - name: show composer syntax
-        run: cat composer.json
-        
-      - name: API testing
-        run: docker exec -i erp php vendor/bin/codecept run
+      - name: list
+        run: ls
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
@@ -49,6 +46,3 @@ jobs:
 
       - name: print salam
         run: echo "SALAM"
-        
-      - name: curl
-        run: curl -k https://erp.local
