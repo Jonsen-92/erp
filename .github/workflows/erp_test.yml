@@ -29,7 +29,7 @@ jobs:
       - name: composer install
         run: docker exec -d erp composer install
       
-      - name: show composer.json
+      - name: show composer file
         run: cat composer.json
 
   # Push image to GitHub Packages.
