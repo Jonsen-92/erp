@@ -25,6 +25,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        
+      - name: get permission
+        run: sudo chown -R $USER:$USER $GITHUB_WORKSPACE
 
       - name: composer install
         run: docker exec -d erp composer install
