@@ -29,11 +29,8 @@ jobs:
       - name: who am i
         run: whoami
         
-      - name: composer install
-        run: docker exec -d erp composer install
-
-      - name: composer.json
-        run: cat composer.json
+      - name: list
+        run: ls 
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
