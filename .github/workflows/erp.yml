@@ -25,6 +25,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        
+      - name: show permission
+        run: ls -lash
 
       - name: composer.json
         run: cat composer.json
