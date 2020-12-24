@@ -26,8 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: who am i
-        run: whoami
+      - name: change permission
+        run: sudo chown -R $USER:$USER /home/github/actions-runner/_work/erp
+        
+      - name: composer install
+        run: docker exec -d erp composer install
         
       - name: list
         run: ls 
