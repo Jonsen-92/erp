@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: show composer.json
+      - name: composer.json
         run: cat composer.json
 
   # Push image to GitHub Packages.
