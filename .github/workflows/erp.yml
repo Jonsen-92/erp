@@ -25,12 +25,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        
-      - name: show permission
-        run: ls -lash
 
       - name: composer.json
         run: cat composer.json
+        
+      - name: API Testing
+        run: docker exec -d erp php vendor/bin/codecept run
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
