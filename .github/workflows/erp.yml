@@ -26,11 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: get directory
-        run: pwd
-        
-      - name: list
-        run: ls
+      - name: show composer.json
+        run: cat composer.json
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
