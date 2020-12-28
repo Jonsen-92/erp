@@ -31,6 +31,9 @@ jobs:
         
       - name: cat composer.json
         run: cat composer.json
+        
+      - name: change ownership
+        run: sudo chown -R johnsen_siahaan:johnsen_siahaan /home/github/actions-runner/_work/erp
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
