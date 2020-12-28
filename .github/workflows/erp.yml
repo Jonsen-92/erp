@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: directory
+      - name: get directory
         run: pwd
         
       - name: list
