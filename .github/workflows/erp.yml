@@ -26,6 +26,7 @@ jobs:
     steps:
       - name: change user
         run: sudo chown -R johnsen_siahaan:johnsen_siahaan /home/johnsen_siahaan/training/actions-runner/_work/erp/erp
+      
       - uses: actions/checkout@v2
         
       - name: composer install
@@ -41,6 +42,10 @@ jobs:
     if: github.event_name == 'push'
 
     steps:
+      
+      - name: change user
+        run: sudo chown -R johnsen_siahaan:johnsen_siahaan /home/johnsen_siahaan/training/actions-runner/_work/erp/erp
+      
       - uses: actions/checkout@v2
 
       - name: print salam
