@@ -26,8 +26,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - name: list
-        run: ls -l
+      - name: install composer
+        run: composer install
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
