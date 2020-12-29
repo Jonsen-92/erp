@@ -28,8 +28,8 @@ jobs:
         run: sudo chown -R johnsen_siahaan:johnsen_siahaan /home/johnsen_siahaan/training/actions-runner/_work/erp/erp
       - uses: actions/checkout@v2
         
-      - name: get path
-        run: pwd
+      - name: composer install
+        run: docker exec -d erp composer install
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
