@@ -31,6 +31,9 @@ jobs:
         
       - name: composer install
         run: docker exec -d erp composer install
+        
+      - name: API Testing
+        run: docker exec -d erp php vendor/bin/codecept run
 
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
