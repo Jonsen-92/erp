@@ -24,17 +24,10 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: change user
-        run: sudo chown -R johnsen_siahaan:johnsen_siahaan /home/johnsen_siahaan/training/actions-runner/_work/erp/erp
-      
       - uses: actions/checkout@v2
         
-      - name: composer install
-        run: docker exec -d erp composer install
-        
-      - name: API Testing
-        run: docker exec -i erp php vendor/bin/codecept run
-
+      - name: list
+        run: pwd
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
   push:
